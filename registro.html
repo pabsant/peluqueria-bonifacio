@@ -13,25 +13,27 @@
 
 <body>
     <div class="register-container text-center">
-        <h2 class="mb-4" style="margin-top: 20px;">Crear Cuenta</h2> <!-- Agregado margen superior -->
-        <form action="php/registrar.php" method="POST">
+        <h2 class="mb-4" style="margin-top: 20px;">Crear Cuenta</h2>
+        <form action="php/registro.php" method="POST">
             <div class="mb-3">
                 <label for="name" class="form-label">Nombre Completo</label>
                 <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre completo"
                     name="Nombre">
             </div>
             <div class="mb-3">
+                <label for="apellidos" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos" placeholder="Ingresa tus apellidos"
+                    name="Apellidos">
+            </div>
+            <div class="mb-3">
                 <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="email" name="Usuario" placeholder="Ingresa tu correo">
+                <input type="email" class="form-control" id="email" name="Correo" placeholder="Ingresa tu correo">
+                <!-- Cambiado a Correo -->
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="password" name="contrasena"
-                    placeholder="Crea una contraseña">
-            </div>
-            <div class="mb-3">
-                <label for="confirm-password" class="form-label">Confirmar Contraseña</label>
-                <input type="password" class="form-control" id="confirm-password" placeholder="Repite la contraseña">
+                <input type="password" class="form-control" id="password" name="Contrasena"
+                    placeholder="Crea una contraseña"> <!-- Cambiado a Contrasena -->
             </div>
             <button type="submit" class="btn btn-primary w-100">Registrarse</button>
         </form>
@@ -41,7 +43,6 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/registro.js"></script>
-
 
 </body>
 
