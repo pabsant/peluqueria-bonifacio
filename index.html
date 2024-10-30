@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peluquería Bonifacio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bonifacio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quienes-somos">Quiénes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Registrarse">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Iniciar Sesion">Iniciar Sesion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel Principal -->
+    <div id="carouselBienvenida" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://i.pinimg.com/originals/53/ee/d0/53eed0ffbf5a5a3a3af7f977ccb93f80--boutique-salon-hair-couture.jpg"
+                    class="d-block w-100" alt="Bienvenida">
+                <div class="carousel-caption d-flex flex-column align-items-center">
+                    <h3>Bienvenido a Peluquería Bonifacio</h3>
+                    <p>Experiencia y dedicación a tu servicio</p>
+                    <a href="#quienes-somos" class="btn btn-primary mt-3">Conócenos</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://media.gettyimages.com/id/1283534272/es/foto/interior-of-a-hairdresser-shop.jpg?s=612x612&w=0&k=20&c=9fOThN4Iv-WD60joNRssvCpPXVqPy6E7s5SwTTcGTbY="
+                    class="d-block w-100" alt="Historia">
+                <div class="carousel-caption d-flex flex-column align-items-center">
+                    <h3>Nuestra Historia</h3>
+                    <p>Más de 20 años de tradición y calidad</p>
+                    <a href="#historia" class="btn btn-primary mt-3">Nuestra Historia</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.lacasadelpeluquero.com/img/cms/tiendas-lcdp.jpg" class="d-block w-100"
+                    alt="Productos">
+                <div class="carousel-caption d-flex flex-column align-items-center">
+                    <h3>Productos Destacados</h3>
+                    <p>Calidad profesional a tu alcance</p>
+                    <a href="#productos" class="btn btn-primary mt-3">Ver Productos</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBienvenida" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselBienvenida" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <!-- Sección Quiénes Somos -->
+    <section id="quienes-somos" class="py-5 text-center bg-primary text-white">
+        <div class="container">
+            <h2><i class="bi bi-people-fill"></i> Quiénes Somos</h2>
+            <p class="lead mt-4">En Peluquería Bonifacio, estamos comprometidos con ofrecer un servicio de calidad y
+                personalizado, con un equipo de profesionales dedicados que cuidan cada detalle para que disfrutes de
+                una
+                experiencia única y especial.</p>
+        </div>
+    </section>
+
+    <!-- Sección Historia -->
+    <section id="historia" class="py-5 text-center bg-light">
+        <div class="container">
+            <h2 class="text-primary"><i class="bi bi-book-half"></i> Nuestra Historia</h2>
+            <p class="lead mt-4">Con más de 20 años en el corazón de la ciudad, Peluquería Bonifacio comenzó como un
+                negocio
+                familiar. Desde entonces, hemos crecido y evolucionado, siempre fieles a nuestros valores de excelencia
+                y
+                cercanía con nuestros clientes.</p>
+        </div>
+    </section>
+
+    <!-- Sección Productos -->
+    <section id="productos" class="py-5 text-center">
+        <div class="container">
+            <h2 class="text-primary"><i class="bi bi-shop"></i> Productos Destacados</h2>
+            <p class="lead mt-4">Calidad profesional a tu alcance</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow">
+                        <img src="producto1.jpg" class="card-img-top" alt="Producto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 1</h5>
+                            <p class="card-text">Descripción breve del producto 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow">
+                        <img src="producto2.jpg" class="card-img-top" alt="Producto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 2</h5>
+                            <p class="card-text">Descripción breve del producto 2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow">
+                        <img src="producto3.jpg" class="card-img-top" alt="Producto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 3</h5>
+                            <p class="card-text">Descripción breve del producto 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Newsletter -->
+    <section id="newsletter" class="py-5 text-center bg-primary text-white">
+        <div class="container">
+            <h2><i class="bi bi-envelope-fill"></i> Suscríbete a nuestra Newsletter</h2>
+            <p class="lead mt-4">Mantente informado sobre nuestras últimas ofertas y eventos especiales.</p>
+            <form class="row justify-content-center">
+                <div class="col-md-6">
+                    <input type="email" class="form-control mb-3" placeholder="Ingresa tu correo" required>
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-light w-100">Suscribirse</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-light">
+        <p class="mb-0">📍 Calle Ejemplo 123, Ciudad</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
