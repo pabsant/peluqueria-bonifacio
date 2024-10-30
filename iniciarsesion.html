@@ -8,26 +8,24 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/iniciarsesion.css" rel="stylesheet">
-
-    <!-- Estilos personalizados -->
-
 </head>
 
 <body>
     <!-- Contenedor del login centrado -->
-    <div class="login-container text-center">
+    <div class="login-container text-center" style="max-width: 400px; margin: auto; padding-top: 100px;">
         <h2 class="mb-4">Iniciar Sesión</h2>
-        <form action="php/login.php" method="POST">
+        <form id="miFormulario" action="php/login.php" method="POST">
             <!-- Campo para el correo electrónico -->
             <div class="mb-3">
                 <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo">
+                <input type="email" class="form-control" id="email" name="Correo" placeholder="Ingresa tu correo"
+                    required>
             </div>
             <!-- Campo para la contraseña -->
             <div class="mb-3">
-                <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="contrasena" name="contrasena"
-                    placeholder="Ingresa tu contraseña">
+                <label for="contrasena" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="contrasena" name="Contrasena"
+                    placeholder="Ingresa tu contraseña" required>
             </div>
             <!-- Botón para enviar el formulario -->
             <button type="submit" class="btn btn-primary w-100">Entrar</button>
@@ -37,36 +35,7 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Manejar el evento de envío del formulario
-            $("#miFormulario").on("submit", function (event) {
-                var email = $("#email");
-                var contrasena = $("#contrasena");
-                var isValid = true;
-
-                // Validar el campo de correo electrónico
-                if (email.val().trim() === "") {
-                    event.preventDefault();
-                    alert("El campo nombre no puede estar vacío.");
-                    email.css("border", "2px solid red");
-                    isValid = false;
-                } else {
-                    email.css("border", "");
-                }
-
-                // Validar el campo de contraseña
-                if (contrasena.val().trim() === "") {
-                    event.preventDefault();
-                    alert("El campo contraseña no puede estar vacío.");
-                    contrasena.css("border", "2px solid red");
-                    isValid = false;
-                } else {
-                    contrasena.css("border", "");
-                }
-            });
-        });
-    </script>
+    <script src="js/iniciarsesion.js"></script>
 </body>
 
 </html>

@@ -17,26 +17,24 @@ if ($conn->connect_error) {
 }
 
 // Verificar si el usuario ya ha iniciado sesión
-if (isset($_SESSION["usuario"])) {
-    $usuario = $_SESSION["usuario"];
-    $Roles = $_SESSION["Rol"]; // Obtener el rol de la sesión
+if (isset($_SESSION["Correo"])) {
+    $correo = $_SESSION["Correo"];
 } else {
     // Obtener los datos del formulario de inicio de sesión
-    $usuario = $_POST["usuario"];
-    $contrasena = $_POST["contrasena"];
+    $correo = $_POST["Correo"];
+    $contrasena = $_POST["Contrasena"];
 
     // Consulta SQL para verificar las credenciales utilizando consultas preparadas
-    $stmt = $conn->prepare("SELECT * FROM roles WHERE Usuario = ? AND Contrasena = ?");
-    $stmt->bind_param("ss", $usuario, $contrasena);
+    $stmt = $conn->prepare("SELECT * FROM usuarios WHERE Correo = ? AND Contrasena = ?");
+    $stmt->bind_param("ss", $correo, $contrasena);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        $_SESSION["usuario"] = $row["usuario"]; // Guardar el usuario en la sesión
-        $usuario = $row["usuario"];
-        $Roles = $row["Rol"]; // Obtener el rol de la consulta
-        
+        $_SESSION["Correo"] = $row["Correo"]; // Guardar el correo en la sesión
+        $correo = $row["Correo"];
+        $rol = $row["Rol"]; // Obtener el rol de la consulta
     } else {
         header("Location: /Ejercicios/mi_pagina_web/error.html");
         exit(); // Salir si las credenciales no son correctas
@@ -50,15 +48,15 @@ $conn->close();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bienvenido</title>
 </head>
 <body>
     <?php
-    echo "<h1>Bienvenido, $usuario</h1>";
+    echo "<h1>Bienvenido, $correo</h1>";
     ?>
 </body>
 </html>
